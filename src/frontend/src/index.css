@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+
+    /* Navy blues */
+    --navy-deep: 0.22 0.09 264;
+    --navy-mid: 0.3 0.11 264;
+    --navy-hero: 0.36 0.14 264;
+    --navy-light: 0.45 0.13 264;
+
+    /* Orange accent */
+    --orange: 0.68 0.19 47;
+    --orange-hover: 0.62 0.19 47;
+
+    /* Semantic tokens */
+    --background: 1 0 0;
+    --foreground: 0.18 0.02 264;
+    --card: 1 0 0;
+    --card-foreground: 0.18 0.02 264;
+    --popover: 1 0 0;
+    --popover-foreground: 0.18 0.02 264;
+    --primary: 0.22 0.09 264;
+    --primary-foreground: 0.98 0 0;
+    --secondary: 0.96 0.005 264;
+    --secondary-foreground: 0.22 0.09 264;
+    --muted: 0.96 0.005 264;
+    --muted-foreground: 0.52 0.02 264;
+    --accent: 0.68 0.19 47;
+    --accent-foreground: 0.98 0 0;
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+    --border: 0.91 0.005 264;
+    --input: 0.91 0.005 264;
+    --ring: 0.36 0.14 264;
+    --chart-1: 0.646 0.222 41.116;
+    --chart-2: 0.6 0.118 184.704;
+    --chart-3: 0.398 0.07 227.392;
+    --chart-4: 0.828 0.189 84.429;
+    --chart-5: 0.769 0.188 70.08;
+    --sidebar: 0.985 0 0;
+    --sidebar-foreground: 0.145 0 0;
+    --sidebar-primary: 0.205 0 0;
+    --sidebar-primary-foreground: 0.985 0 0;
+    --sidebar-accent: 0.97 0 0;
+    --sidebar-accent-foreground: 0.205 0 0;
+    --sidebar-border: 0.922 0 0;
+    --sidebar-ring: 0.708 0 0;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Plus Jakarta Sans", sans-serif;
+  }
+}
+
+@layer utilities {
+  .hero-gradient {
+    background: linear-gradient(
+      135deg,
+      oklch(0.22 0.09 264) 0%,
+      oklch(0.36 0.14 264) 100%
+    );
+  }
+  .navy-gradient {
+    background: linear-gradient(
+      135deg,
+      oklch(0.22 0.09 264) 0%,
+      oklch(0.3 0.11 264) 100%
+    );
+  }
+}
